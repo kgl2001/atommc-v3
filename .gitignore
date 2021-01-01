@@ -1,0 +1,9 @@
+intermediate
+*.cof
+*.map
+*.bin
+*.o
+*.zip
+*.cod
+*.lst
+*.hex
