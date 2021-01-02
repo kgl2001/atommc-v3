@@ -10,8 +10,16 @@
 #define GREENLEDON() PORTCbits.RC1 = 1;
 #define GREENLEDOFF() PORTCbits.RC1 = 0;
 
+#define  V4HARDWARE
+
+#ifdef V4HARDWARE
+// V4 hardware has IRQ on different pins, freeing up the serial port
+#define ASSERTIRQ()  PORTAbits.RA4 = 0; TRISAbits.TRISA4 = 0;
+#define RELEASEIRQ() TRISAbits.TRISA4 = 1;
+#else
 #define ASSERTIRQ()  PORTCbits.RC6 = 0; TRISCbits.TRISC6 = 0;
 #define RELEASEIRQ() TRISCbits.TRISC6 = 1;
+#endif
 
 #define ACTIVITYSTROBE(x) LATAbits.LATA5 = x;
 

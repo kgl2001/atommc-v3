@@ -7,3 +7,4 @@ intermediate
 *.cod
 *.lst
 *.hex
+.DS_Store
