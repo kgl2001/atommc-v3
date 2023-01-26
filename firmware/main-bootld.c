@@ -63,7 +63,11 @@ typedef enum {
 #define FS_FAT32  3
 
 #define BLVERSION_MAJOR 3
+#ifdef V4HARDWARE
 #define BLVERSION_MINOR 0
+#else
+#define BLVERSION_MINOR 1
+#endif
 
 #pragma code low_vector=0x0008
 void interrupt (void)

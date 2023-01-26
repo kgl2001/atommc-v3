@@ -4,7 +4,11 @@
 #include <p18cxxx.h>
 
 #define VSN_MAJ 3
+#ifdef V4HARDWARE
 #define VSN_MIN 0
+#else
+#define VSN_MIN 1
+#endif
 
 #define SECBUFFSIZE 512
 #define GLOBUFFSIZE 256

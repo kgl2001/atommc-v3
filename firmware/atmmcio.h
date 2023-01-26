@@ -10,7 +10,8 @@
 #define GREENLEDON() PORTCbits.RC1 = 1;
 #define GREENLEDOFF() PORTCbits.RC1 = 0;
 
-#define  V4HARDWARE
+// Now defined in script
+// #define  V4HARDWARE
 
 #ifdef V4HARDWARE
 // V4 hardware has IRQ on different pins, freeing up the serial port
